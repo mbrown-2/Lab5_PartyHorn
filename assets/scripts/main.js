@@ -16,27 +16,28 @@
 // Implement connection between sound slider and input field.
 document.getElementById("volume-number").onchange = function() {
     document.getElementById("volume-slider").value = this.value;
-    noisePic();
+    noisePic("volume-number");
 }
     
 document.getElementById("volume-slider").onchange = function() {
     document.getElementById("volume-number").value = this.value;
-    noisePic();
+    noisePic("volume-slider");
 }
 
-noisePic() {
-    var volPic = document.getElementById("volume-image");
-    if (this.value == 0) {
-        volPic.src = "./assets/media/icons/volume-level-0.svg";
+noisePic(id) {
+    var volPic = document.getElementById(id);
+    var source = document.getElementById("volume-image");
+    if (volPic.value == 0) {
+        source.src = "./assets/media/icons/volume-level-0.svg";
     }
-    else if (this.value >= 1 && this.value <= 33) {
-        volPic.src = "./assets/media/icons/volume-level-1.svg";
+    else if (volPic.value >= 1 && this.value <= 33) {
+        source.src = "./assets/media/icons/volume-level-1.svg";
     }
-    else if (this.value >= 34 && this.value <= 66) {
-        volPic.src = "./assets/media/icons/volume-level-2.svg";
+    else if (volPic.value >= 34 && this.value <= 66) {
+        source.src = "./assets/media/icons/volume-level-2.svg";
     }
     else {
-        volPic.src = "./assets/media/icons/volume-level-3.svg";
+        source.src = "./assets/media/icons/volume-level-3.svg";
     }
 }
 
