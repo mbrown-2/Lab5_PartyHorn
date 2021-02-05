@@ -27,13 +27,13 @@ function noisePic(id) {
     }
 }
 
-document.getElementById("radio-air-horn-container").onClick = function() {
+document.getElementById("radio-air-horn-container").check = function() {
     mainPic("radio-air-horn-container");
 }
-document.getElementById("radio-car-horn-container").onClick = function() {
+document.getElementById("radio-car-horn-container").check = function() {
     mainPic("radio-car-horn-container");
 }
-document.getElementById("radio-party-horn-container").onClick = function() {
+document.getElementById("radio-party-horn-container").check = function() {
     mainPic("radio-party-horn-container");
 }
 
