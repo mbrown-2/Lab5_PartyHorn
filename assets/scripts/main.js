@@ -14,11 +14,12 @@ function noisePic(id) {
     var volPic = document.getElementById(id);
     var source = document.getElementById("volume-image");
     var button = document.getElementById("honk-btn");
-    var hornVol = documet.getElementById("");
+    var hornVol = documet.getElementById("horn-sound");
     
     if (volPic.value == 0) {
         button.disabled = true;
         source.src = "./assets/media/icons/volume-level-0.svg";
+        button.disabled = true;
     }
     else if (volPic.value >= 1 && volPic.value <= 33) {
         source.src = "./assets/media/icons/volume-level-1.svg";
