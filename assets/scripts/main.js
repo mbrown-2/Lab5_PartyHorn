@@ -24,7 +24,7 @@ document.getElementById("volume-slider").onchange = function() {
     noisePic("volume-slider");
 }
 
-noisePic(id) {
+function noisePic(id) {
     var volPic = document.getElementById(id);
     var source = document.getElementById("volume-image");
     if (volPic.value == 0) {
