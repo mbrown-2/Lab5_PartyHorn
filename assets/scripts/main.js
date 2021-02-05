@@ -1,18 +1,3 @@
-// main.js
-
-// TODO
-
-// Wtf am i supposed to do?
-
-
-// 1) input field for textual indicator of sound level
-
-// 2) Slider that serves visual controlller
-
-// 3) Volume icon that changes depending on sound level
-
-
-
 // Implement connection between sound slider and input field.
 document.getElementById("volume-number").onchange = function() {
     document.getElementById("volume-slider").value = this.value;
@@ -24,6 +9,7 @@ document.getElementById("volume-slider").onchange = function() {
     noisePic("volume-slider");
 }
 
+// Function to change noise level picture.
 function noisePic(id) {
     var volPic = document.getElementById(id);
     var source = document.getElementById("volume-image");
@@ -41,11 +27,27 @@ function noisePic(id) {
     }
 }
 
-// Change volume icon depending on sound level.
+document.getElementById("radio-air-horn-container").onClick = function() {
+    mainPic("radio-air-horn-container");
+}
+document.getElementById("radio-car-horn-container").onClick = function() {
+    mainPic("radio-car-horn-container");
+}
+document.getElementById("radio-party-horn-container").onClick = function() {
+    mainPic("radio-party-horn-container");
+}
 
-// level 3 = 67-100
-// level 2 = 66-34
-// level 1 = 33-0
+function mainPic(id) {
+    if (id == "radio-air-horn-container") {
+        document.getElementById("sound-image").src = "./assets/media/images/air-horn.svg";
+    }
+    if (id == "radio-car-horn-container") {
+        document.getElementById("sound-image").src = "./assets/media/images/car.svg";
+    }
+    if (id == "radio-party-horn-container") {
+        document.getElementById("sound-image").src = "./assets/media/images/party-horn.svg";
+    }
+}
 
 
 // Use event-listener for pressing button at end
