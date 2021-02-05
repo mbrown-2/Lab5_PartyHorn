@@ -16,7 +16,15 @@
 // Implement connection between sound slider and input field.
 document.getElementById("volume-number").onchange = function() {
     document.getElementById("volume-slider").value = this.value;
+    noisePic();
+}
     
+document.getElementById("volume-slider").onchange = function() {
+    document.getElementById("volume-number").value = this.value;
+    noisePic();
+}
+
+noisePic() {
     var volPic = document.getElementById("volume-image");
     if (this.value == 0) {
         volPic.src = "./assets/media/icons/volume-level-0.svg";
@@ -30,10 +38,6 @@ document.getElementById("volume-number").onchange = function() {
     else {
         volPic.src = "./assets/media/icons/volume-level-3.svg";
     }
-}
-    
-document.getElementById("volume-slider").onchange = function() {
-    document.getElementById("volume-number").value = this.value;
 }
 
 // Change volume icon depending on sound level.
