@@ -27,34 +27,30 @@ function noisePic(id) {
     }
 }
 
-document.getElementById("radio-air-horn-container").onchange = function() {
+// Change center picture.
+document.getElementById("radio-air-horn-container").onclick = function() {
     mainPic("radio-air-horn-container");
 }
-document.getElementById("radio-car-horn-container").onchange = function() {
+document.getElementById("radio-car-horn-container").onclick = function() {
     mainPic("radio-car-horn-container");
+
 }
-document.getElementById("radio-party-horn-container").onchange = function() {
+document.getElementById("radio-party-horn-container").onclick = function() {
     mainPic("radio-party-horn-container");
 }
 
 function mainPic(id) {
-    var selection = document.getElementById(id);
-    if (selection.checked == true) {
-        if (id == "radio-air-horn-container") {
-            document.getElementById("sound-image").src = "./assets/media/images/air-horn.svg";
-        }
-        if (id == "radio-car-horn-container") {
-            document.getElementById("sound-image").src = "./assets/media/images/car.svg";
-        }
-        if (id == "radio-party-horn-container") {
-            document.getElementById("sound-image").src = "./assets/media/images/party-horn.svg";
-        }
+    var picture = document.getElementById("sound-image");
+    if (id == "radio-air-horn-container") {
+        picture.src = "./assets/media/images/air-horn.svg";
+    }
+    else if (id == "radio-car-horn-container") {
+        picture.src = "./assets/media/images/car.svg";
+    }
+    else {
+        picture.src = "./assets/media/images/party-horn.svg";
     }
 }
 
 // Play the sounds.
 
-
-function noise() {
-    
-}
