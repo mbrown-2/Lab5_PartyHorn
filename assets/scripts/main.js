@@ -1,10 +1,10 @@
 // Implement connection between sound slider and input field.
-document.getElementById("volume-number").onchange = function() {
+document.getElementById("volume-number").oninput = function() {
     document.getElementById("volume-slider").value = this.value;
     noisePic("volume-number");
 }
     
-document.getElementById("volume-slider").onchange = function() {
+document.getElementById("volume-slider").oninput = function() {
     document.getElementById("volume-number").value = this.value;
     noisePic("volume-slider");
 }
@@ -61,9 +61,4 @@ function mainPic(id) {
     }
 }
 
-// Play the sounds.
-document.getElementById("honk-btn").addEventListener("click", function(event) {
-    event.preventDefault();
-    var x = document.getElementById("horn-sound");
-    x.play();
-}
+
