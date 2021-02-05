@@ -14,6 +14,8 @@ function noisePic(id) {
     var volPic = document.getElementById(id);
     var source = document.getElementById("volume-image");
     var button = document.getElementById("honk-btn");
+    var hornVol = documet.getElementById("");
+    
     if (volPic.value == 0) {
         button.disabled = true;
         source.src = "./assets/media/icons/volume-level-0.svg";
@@ -21,14 +23,17 @@ function noisePic(id) {
     else if (volPic.value >= 1 && volPic.value <= 33) {
         source.src = "./assets/media/icons/volume-level-1.svg";
         button.disabled = false;
+        hornVol.volume = (volPic.value)/100;
     }
     else if (volPic.value >= 34 && volPic.value <= 66) {
         source.src = "./assets/media/icons/volume-level-2.svg";
         button.disabled = false;
+        hornVol.volume = (volPic.value)/100;
     }
     else {
         source.src = "./assets/media/icons/volume-level-3.svg";
         button.disabled = false;
+        hornVol.volume = (volPic.value)/100;
     }
 }
 
