@@ -61,4 +61,10 @@ function mainPic(id) {
     }
 }
 
-
+// Play the sounds.
+// Play the sounds.
+document.getElementById("honk-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    var x = document.getElementById("horn-sound");
+    x.play();
+})
