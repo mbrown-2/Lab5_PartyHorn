@@ -60,10 +60,3 @@ function mainPic(id) {
         horn.src = "./assets/media/audio/party-horn.mp3";
     }
 }
-
-// Play the sounds.
-document.getElementById("honk-btn").addEventListener("click", function(event) {
-    event.preventDefault();
-    var x = document.getElementById("horn-sound");
-    x.play();
-}
