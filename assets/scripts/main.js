@@ -30,10 +30,10 @@ function noisePic(id) {
     if (volPic.value == 0) {
         source.src = "./assets/media/icons/volume-level-0.svg";
     }
-    else if (volPic.value >= 1 && this.value <= 33) {
+    else if (volPic.value >= 1 && volPic.value <= 33) {
         source.src = "./assets/media/icons/volume-level-1.svg";
     }
-    else if (volPic.value >= 34 && this.value <= 66) {
+    else if (volPic.value >= 34 && volPic.value <= 66) {
         source.src = "./assets/media/icons/volume-level-2.svg";
     }
     else {
