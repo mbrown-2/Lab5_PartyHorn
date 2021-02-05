@@ -14,12 +14,12 @@
 
 
 // Implement connection between sound slider and input field.
-var output = document.getElementById("volume-number");
-var slider = document.getElementById("volume-slider");
-
-output.innerHTML = slider.value;
-slider.oninput = function() {
-    output.innerHTML = this.value;
+document.getElementById("volume-number").onchange = function() {
+    document.getElementById("volume-slider").value = this.value; 
+}
+    
+document.getElementById("volume-slider").onchange = function() {
+    document.getElementById("volume-number").value = this.value;
 }
 
 // Implement connection between sound level and image
@@ -27,3 +27,6 @@ slider.oninput = function() {
 // level 3 = 67-100
 // level 2 = 66-34
 // level 1 = 33-0
+
+
+// Use event-listener for pressing button at end
